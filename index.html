@@ -36,8 +36,18 @@
         }
       }
     </style>
+    <script>
+      window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get('token');
+        if (token) {
+          window.location.href = `myvpn://open?token=${token}`;
+        }
+        document.getElementById('vpnLink').href = `myvpn://open?token=${token || ''}`;
+      }
+    </script>
   </head>
   <body>
-    <a class="vpn-button" href="myvpn://open?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMjAxNjMxLCJ1c2VyX2VtYWlsIjoiIiwiaWF0IjoxNzQ5Mjk1NDE0fQ.rYnthiM3fLGnFxfrcB4dcY3BE7cAdQttonFgbrpNETc">Открыть</a>
+    <a id="vpnLink" class="vpn-button" href="#">Открыть</a>
   </body>
 </html>

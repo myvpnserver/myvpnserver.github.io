@@ -10,7 +10,6 @@ export async function getUserInfo() {
             await getAuthToken();
             return { success: false, error: 'Токен не найден' };
         }
-
         const browserLang = navigator.language.split('-')[0];
         const locale = ['ru', 'en'].includes(browserLang) ? browserLang : 'ru';
 

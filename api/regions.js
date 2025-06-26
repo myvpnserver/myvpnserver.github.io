@@ -24,7 +24,7 @@ export async function getRegions() {
         'Казахстан': 'icons/flags/KZ.svg',
         'Нидерланды': 'icons/flags/NL.svg',
         'Румыния': 'icons/flags/RO.svg',
-        'Канада': 'iicons/flags/CA.svg',
+        'Канада': 'icons/flags/CA.svg',
         'Армения': 'icons/flags/AM.svg'
       };
       const ruToCode = {
